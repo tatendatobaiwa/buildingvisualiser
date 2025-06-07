@@ -43,3 +43,45 @@ body {
 .main-content {
   flex: 1;
 }
+
+/* Global Button Styles */
+.btn {
+  display: inline-block;
+  padding: 0.8rem 1.8rem;
+  border-radius: 6px;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 1rem;
+  transition: all 0.3s ease-in-out;
+  border: 1px solid transparent;
+  cursor: pointer;
+  text-align: center;
+}
+
+.btn-primary {
+  background-color: var(--primary-color);
+  color: var(--text-color);
+  border-color: var(--primary-color);
+}
+
+.btn-primary:hover {
+  background-color: transparent;
+  color: var(--primary-color);
+}
+
+.btn-secondary {
+  background-color: transparent;
+  color: var(--on-surface-color);
+  border-color: var(--on-surface-color);
+}
+
+.btn-secondary:hover {
+  background-color: var(--on-surface-color);
+  color: var(--surface-color);
+}
+
+.btn-block {
+  width: 100%;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+}

@@ -58,9 +58,7 @@
   box-shadow: 0 0 0 2px rgba(229, 62, 62, 0.2);
 }
 
-.btn-block {
-  width: 100%;
-  padding: 1rem;
+.auth-form .btn-block {
   margin-top: 1rem;
 }
 

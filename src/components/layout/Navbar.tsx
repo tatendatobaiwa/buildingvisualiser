@@ -27,8 +27,10 @@ const Navbar: React.FC = () => {
           <Link to="/support" className="nav-item" onClick={closeMobileMenu}>Support</Link>
           
           {/* Mobile-only actions */}
-          <Link to="/login" className="nav-item mobile-only" onClick={closeMobileMenu}>Login</Link>
-          <Link to="/signup" className="btn btn-primary mobile-only" onClick={closeMobileMenu}>Get Started</Link>
+          <div className="nav-actions-mobile">
+            <Link to="/login" className="btn btn-secondary" onClick={closeMobileMenu}>Login</Link>
+            <Link to="/signup" className="btn btn-primary" onClick={closeMobileMenu}>Get Started</Link>
+          </div>
         </div>
         <div className="nav-actions-desktop">
           <Link to="/login" className="nav-item">Login</Link>

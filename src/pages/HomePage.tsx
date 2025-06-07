@@ -18,16 +18,6 @@ const HomePage: React.FC = () => {
           </Link>
         </div>
       </header>
-
-      {/* Product Preview Section */}
-      <section className="product-preview-section">
-          <h2 className="section-title">See BVE in Action</h2>
-          <div className="product-image-container">
-            {/* Replace with an actual screenshot or video */}
-            <img src="https://images.unsplash.com/photo-1522199755839-a2bacb67c546?q=80&w=2072&auto=format&fit=crop" alt="Product preview" className="product-image" />
-          </div>
-      </section>
-
       {/* Features Section */}
       <section className="home-features">
         <h2 className="section-title">Why Choose BVE?</h2>
