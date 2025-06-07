@@ -72,6 +72,18 @@
   color: var(--primary-color);
 }
 
+.social-icons {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 160px;
+}
+
+.social-icon-link {
+  color: var(--on-surface-color);
+  font-size: 24px;
+}
+
 .footer-bottom {
   padding-top: 2rem;
   border-top: 1px solid #2d2d2d;

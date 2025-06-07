@@ -87,10 +87,10 @@
 
 /* Hero Section */
 .home-hero {
-  background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('https://images.unsplash.com/photo-1593941707882-6e0b856c9643?q=80&w=2070&auto=format&fit=crop');
+  background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('https://images.unsplash.com/photo-1593941707882-6e0b856c9643?q=80&w=2070&auto=format&fit=crop');
   background-size: cover;
   background-position: center;
-  height: 60vh;
+  height: 80vh;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -100,57 +100,168 @@
   color: white;
 }
 
+.hero-content {
+  animation: fadeIn 1s ease-out;
+}
+
 .hero-title {
-  font-size: 3.5rem;
+  font-size: 3.8rem;
+  font-weight: 800;
   margin-bottom: 1rem;
+  text-shadow: 2px 2px 8px rgba(0,0,0,0.7);
 }
 
 .hero-subtitle {
-  font-size: 1.5rem;
-  max-width: 600px;
+  font-size: 1.4rem;
+  max-width: 700px;
   margin-bottom: 2rem;
+  line-height: 1.6;
 }
 
 .btn-large {
   padding: 1rem 2.5rem;
   font-size: 1.2rem;
+  font-weight: 700;
 }
 
 /* General Section Styling */
 .section-title {
   text-align: center;
-  font-size: 2.5rem;
-  margin-bottom: 3rem;
+  font-size: 2.8rem;
+  margin-bottom: 4rem;
+  font-weight: 700;
   color: var(--on-surface-color);
+}
+
+/* Product Preview Section */
+.product-preview-section {
+  padding: 6rem 2rem;
+  text-align: center;
+}
+
+.product-image-container {
+  max-width: 1000px;
+  margin: 0 auto;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 20px 40px rgba(0,0,0,0.3);
+}
+
+.product-image {
+  width: 100%;
+  height: auto;
+  display: block;
 }
 
 /* Features Section */
 .home-features {
-  padding: 4rem 2rem;
+  padding: 6rem 2rem;
   background-color: var(--surface-color);
 }
 
 .features-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  gap: 2rem;
+  gap: 3rem;
   max-width: 1200px;
   margin: 0 auto;
 }
 
 .feature-item {
   text-align: center;
+  animation: fadeIn 1s ease-out forwards;
+  opacity: 0;
 }
 
-.feature-item h3 {
-  font-size: 1.5rem;
+.feature-item:nth-child(2) {
+  animation-delay: 0.2s;
+}
+.feature-item:nth-child(3) {
+  animation-delay: 0.4s;
+}
+
+.feature-icon {
   color: var(--primary-color);
   margin-bottom: 1rem;
 }
 
+.feature-item h3 {
+  font-size: 1.8rem;
+  color: var(--on-surface-color);
+  margin-bottom: 1rem;
+}
+
+/* How it works */
+.how-it-works-section {
+  padding: 6rem 2rem;
+}
+
+.steps-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+  flex-wrap: wrap;
+}
+
+.step {
+  text-align: center;
+  max-width: 300px;
+}
+
+.step-icon-wrapper {
+  background-color: var(--surface-color);
+  border-radius: 50%;
+  width: 80px;
+  height: 80px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto 1rem;
+  color: var(--primary-color);
+  border: 2px solid var(--primary-color);
+}
+
+.step-arrow {
+  font-size: 2.5rem;
+  color: var(--primary-color);
+}
+
+/* Testimonials Section */
+.testimonials-section {
+    padding: 6rem 2rem;
+    background-color: var(--surface-color);
+}
+
+.testimonials-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+    gap: 2rem;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.testimonial-card {
+    background-color: #0d0d0d;
+    padding: 2rem;
+    border-radius: 8px;
+    border-left: 5px solid var(--primary-color);
+}
+
+.testimonial-text {
+    font-style: italic;
+    font-size: 1.1rem;
+    margin-bottom: 1rem;
+}
+
+.testimonial-author {
+    font-weight: bold;
+    color: var(--primary-color);
+}
+
 /* Call to Action Section */
 .home-cta {
-  padding: 4rem 2rem;
+  padding: 6rem 2rem;
   text-align: center;
   background-color: #0d0d0d;
 }
@@ -158,28 +269,22 @@
 .home-cta p {
   font-size: 1.2rem;
   margin-bottom: 2rem;
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
-/* Base button styles from main.css might need to be created if not already there */
-.btn {
-  display: inline-block;
-  padding: 0.8rem 1.8rem;
-  border-radius: 6px;
-  text-decoration: none;
-  font-weight: 600;
-  font-size: 1rem;
-  transition: all 0.3s ease;
-  border: 1px solid transparent;
-  cursor: pointer;
+.btn, .btn-primary, .btn-primary:hover {
+  transition: all 0.3s ease-in-out;
 }
 
-.btn-primary {
-  background-color: var(--primary-color);
-  color: var(--text-color);
-  border-color: var(--primary-color);
-}
-
-.btn-primary:hover {
-  background-color: transparent;
-  color: var(--primary-color);
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }

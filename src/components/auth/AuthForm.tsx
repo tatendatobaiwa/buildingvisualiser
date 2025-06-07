@@ -1,5 +1,7 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
+import { FcGoogle } from 'react-icons/fc';
+import { FaApple } from 'react-icons/fa';
 import '../../styles/Auth.css'; // We'll reuse the styles
 
 interface AuthFormProps {
@@ -64,8 +66,12 @@ const AuthForm: React.FC<AuthFormProps> = ({ isSignup = false }) => {
       <div className="divider">OR</div>
 
       <div className="social-login">
-        <button className="btn-social google">Continue with Google</button>
-        <button className="btn-social apple">Continue with Apple</button>
+        <button className="btn-social google">
+          <FcGoogle className="social-icon" /> Continue with Google
+        </button>
+        <button className="btn-social apple">
+          <FaApple className="social-icon" /> Continue with Apple
+        </button>
       </div>
 
       <div className="auth-switch">
