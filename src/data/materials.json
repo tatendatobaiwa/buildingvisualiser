@@ -1,0 +1,49 @@
+[
+  {
+    "id": "brick-stock",
+    "name": "Standard Stock Brick",
+    "dimensions": {
+      "length": 0.222,
+      "width": 0.106,
+      "height": 0.073
+    },
+    "price": 2.50,
+    "unit": "per brick"
+  },
+  {
+    "id": "brick-cement",
+    "name": "Cement Block",
+    "dimensions": {
+      "length": 0.390,
+      "width": 0.190,
+      "height": 0.190
+    },
+    "price": 12.00,
+    "unit": "per block"
+  },
+  {
+    "id": "cement-32.5",
+    "name": "Cement (32.5N)",
+    "price": 75.00,
+    "unit": "per 50kg bag"
+  },
+  {
+    "id": "sand",
+    "name": "Sand",
+    "price": 400.00,
+    "unit": "per cubic meter"
+  },
+  {
+    "id": "stone",
+    "name": "Stone Aggregate",
+    "price": 450.00,
+    "unit": "per cubic meter"
+  },
+  {
+    "id": "paint-pva",
+    "name": "PVA Paint",
+    "coverage": 10,
+    "price": 500.00,
+    "unit": "per 20L"
+  }
+]

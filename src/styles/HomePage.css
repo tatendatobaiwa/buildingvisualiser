@@ -1,0 +1,185 @@
+.homepage {
+  display: flex;
+  flex-direction: column;
+  min-height: 80vh;
+}
+
+.hero {
+  background-color: var(--surface-color);
+  padding: 4rem 2rem;
+  border-radius: 8px;
+  margin-bottom: 2rem;
+}
+
+.hero h1 {
+  font-size: 3.2em;
+  line-height: 1.1;
+  color: var(--primary-color);
+  margin: 0;
+}
+
+.hero p {
+  font-size: 1.2rem;
+  color: var(--on-surface-color);
+  margin-top: 1rem;
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.hero-actions {
+  margin-top: 2rem;
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+}
+
+.btn {
+  padding: 0.8rem 1.8rem;
+  border-radius: 6px;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 1rem;
+  transition: all 0.3s ease;
+  border: 1px solid transparent;
+}
+
+.btn-primary {
+  background-color: var(--primary-color);
+  color: var(--text-color);
+  border-color: var(--primary-color);
+}
+
+.btn-primary:hover {
+  background-color: transparent;
+  color: var(--primary-color);
+}
+
+.btn-secondary {
+  background-color: transparent;
+  color: var(--on-surface-color);
+  border-color: var(--on-surface-color);
+}
+
+.btn-secondary:hover {
+  background-color: var(--on-surface-color);
+  color: var(--surface-color);
+}
+
+.estimator-container {
+  flex-grow: 1;
+  padding: 2rem;
+  background-color: var(--surface-color);
+  border-radius: 8px;
+}
+
+.footer {
+  margin-top: 2rem;
+  padding-top: 1rem;
+  border-top: 1px solid var(--surface-color);
+  font-size: 0.9rem;
+  color: var(--on-surface-color);
+}
+
+.homepage-container {
+  width: 100%;
+}
+
+/* Hero Section */
+.home-hero {
+  background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('https://images.unsplash.com/photo-1593941707882-6e0b856c9643?q=80&w=2070&auto=format&fit=crop');
+  background-size: cover;
+  background-position: center;
+  height: 60vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 0 2rem;
+  color: white;
+}
+
+.hero-title {
+  font-size: 3.5rem;
+  margin-bottom: 1rem;
+}
+
+.hero-subtitle {
+  font-size: 1.5rem;
+  max-width: 600px;
+  margin-bottom: 2rem;
+}
+
+.btn-large {
+  padding: 1rem 2.5rem;
+  font-size: 1.2rem;
+}
+
+/* General Section Styling */
+.section-title {
+  text-align: center;
+  font-size: 2.5rem;
+  margin-bottom: 3rem;
+  color: var(--on-surface-color);
+}
+
+/* Features Section */
+.home-features {
+  padding: 4rem 2rem;
+  background-color: var(--surface-color);
+}
+
+.features-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.feature-item {
+  text-align: center;
+}
+
+.feature-item h3 {
+  font-size: 1.5rem;
+  color: var(--primary-color);
+  margin-bottom: 1rem;
+}
+
+/* Call to Action Section */
+.home-cta {
+  padding: 4rem 2rem;
+  text-align: center;
+  background-color: #0d0d0d;
+}
+
+.home-cta p {
+  font-size: 1.2rem;
+  margin-bottom: 2rem;
+}
+
+/* Base button styles from main.css might need to be created if not already there */
+.btn {
+  display: inline-block;
+  padding: 0.8rem 1.8rem;
+  border-radius: 6px;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 1rem;
+  transition: all 0.3s ease;
+  border: 1px solid transparent;
+  cursor: pointer;
+}
+
+.btn-primary {
+  background-color: var(--primary-color);
+  color: var(--text-color);
+  border-color: var(--primary-color);
+}
+
+.btn-primary:hover {
+  background-color: transparent;
+  color: var(--primary-color);
+}
