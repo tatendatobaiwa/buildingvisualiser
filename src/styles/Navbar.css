@@ -18,7 +18,6 @@
   height: 80px;
   z-index: 1;
   width: 100%;
-  max-width: 1280px;
   padding: 0 2rem;
 }
 
@@ -31,6 +30,10 @@
   font-weight: bold;
   display: flex;
   align-items: center;
+}
+
+.menu-icon {
+  display: none;
 }
 
 .nav-menu {
@@ -54,14 +57,94 @@
   color: var(--primary-color);
 }
 
-.nav-actions {
+.nav-actions-desktop {
   display: flex;
   align-items: center;
   gap: 1rem;
+}
+
+.mobile-only {
+  display: none;
 }
 
 /* Re-using btn styles from HomePage but might need adjustments */
 .navbar .btn {
   padding: 0.5rem 1.2rem;
   font-size: 1rem;
+}
+
+@media screen and (max-width: 960px) {
+  .nav-menu {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1.5rem;
+    width: 100%;
+    position: absolute;
+    top: 80px;
+    left: 0;
+    background-color: var(--surface-color);
+    max-height: 0;
+    overflow: hidden;
+    opacity: 0;
+    transition: max-height 0.4s ease-out, padding 0.4s ease-out, opacity 0.3s ease-in-out;
+    padding: 0rem 0;
+  }
+
+  .nav-menu.active {
+    max-height: 500px;
+    opacity: 1;
+    z-index: 10;
+    padding: 2rem 0;
+    border-bottom: 1px solid #2d2d2d;
+  }
+
+  .nav-item {
+    padding: 0;
+    width: 100%;
+    font-size: 1.3rem;
+    text-align: center;
+  }
+
+  .nav-item:hover {
+    color: var(--primary-color);
+    transform: scale(1.1);
+    transition: transform 0.2s ease-in-out;
+  }
+
+  .navbar-logo {
+    position: absolute;
+    top: 0;
+    left: 0;
+    transform: translate(25%, 50%);
+    z-index: 20;
+  }
+
+  .menu-icon {
+    display: block;
+    position: absolute;
+    top: 0;
+    right: 0;
+    transform: translate(-100%, 60%);
+    font-size: 1.8rem;
+    cursor: pointer;
+    color: var(--on-surface-color);
+    z-index: 20;
+  }
+  
+  .nav-actions-desktop {
+    display: none;
+  }
+
+  .mobile-only {
+    display: block;
+  }
+
+  .mobile-only.btn {
+    width: 90%;
+    max-width: 320px;
+    padding: 0.8rem;
+    text-align: center;
+    margin-top: 1rem;
+  }
 }

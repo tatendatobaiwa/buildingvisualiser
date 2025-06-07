@@ -15,8 +15,10 @@
   align-items: center;
   text-align: center;
   margin-bottom: 24px;
-  padding: 24px;
+  padding: 24px 2rem;
   color: var(--text-color);
+  width: 100%;
+  box-sizing: border-box;
 }
 
 .footer-subscription-heading {
@@ -37,9 +39,11 @@
 
 .footer-links {
   width: 100%;
-  max-width: 1000px;
   display: flex;
   justify-content: center;
+  flex-wrap: wrap;
+  padding: 0 2rem;
+  box-sizing: border-box;
 }
 
 .footer-link-wrapper {
@@ -85,10 +89,11 @@
 }
 
 .footer-bottom {
-  padding-top: 2rem;
+  padding: 2rem;
   border-top: 1px solid #2d2d2d;
-  width: 80%;
+  width: 100%;
   text-align: center;
+  box-sizing: border-box;
 }
 
 .website-rights {
