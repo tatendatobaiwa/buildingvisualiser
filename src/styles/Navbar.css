@@ -15,10 +15,11 @@
 .navbar-container {
   display: flex;
   justify-content: space-between;
+  align-items: center;
   height: 80px;
-  z-index: 1;
   width: 100%;
   padding: 0 2rem;
+  box-sizing: border-box;
 }
 
 .navbar-logo {
@@ -28,12 +29,6 @@
   text-decoration: none;
   font-size: 2rem;
   font-weight: bold;
-  display: flex;
-  align-items: center;
-}
-
-.menu-icon {
-  display: none;
 }
 
 .nav-menu {
@@ -41,19 +36,25 @@
   align-items: center;
   list-style: none;
   text-align: center;
+  margin: 0;
+  padding: 0;
+  gap: 1.5rem;
 }
 
 .nav-item {
+  height: 80px;
+  display: flex;
+  align-items: center;
+}
+
+.nav-link {
   color: var(--on-surface-color);
   text-decoration: none;
   padding: 0.5rem 1rem;
-  height: 100%;
-  display: flex;
-  align-items: center;
   transition: color 0.3s ease-out;
 }
 
-.nav-item:hover {
+.nav-link:hover {
   color: var(--primary-color);
 }
 
@@ -63,39 +64,38 @@
   gap: 1rem;
 }
 
-.mobile-only {
+.nav-item-mobile {
   display: none;
 }
 
-/* Re-using btn styles from HomePage but might need adjustments */
+.menu-icon {
+  display: none;
+}
+
+/* Navbar Button adjustments */
 .navbar .btn {
   padding: 0.5rem 1.2rem;
   font-size: 1rem;
 }
 
 @media screen and (max-width: 960px) {
-  .nav-actions-desktop {
-    display: none;
-  }
-
   .nav-menu {
-    position: absolute;
-    top: 80px;
-    left: 0;
-    width: 100%;
-    
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 1rem;
+    gap: 2rem;
+    width: 100%;
+    position: absolute;
+    top: 80px;
+    left: 0;
     
     background-color: var(--surface-color);
-    padding: 0;
     
     max-height: 0;
     overflow: hidden;
     opacity: 0;
     transition: all 0.4s ease-out;
+    padding: 0;
   }
 
   .nav-menu.active {
@@ -104,6 +104,10 @@
     z-index: 10;
     padding: 2rem 0;
     border-bottom: 1px solid #2d2d2d;
+  }
+
+  .nav-actions-desktop {
+    display: none;
   }
 
   .menu-icon {
@@ -120,27 +124,28 @@
 
   .nav-item {
     width: 100%;
-    padding: 0.5rem 0;
-    font-size: 1.3rem;
-    text-align: center;
-  }
-  
-  .nav-actions-mobile {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 1rem;
-    width: 100%;
-    margin-top: 1rem;
-    padding: 0 2rem;
-    box-sizing: border-box;
+    height: auto;
+    justify-content: center;
   }
 
-  .nav-actions-mobile .btn {
-      width: 100%;
+  .nav-link {
+    padding: 1rem 0;
+    font-size: 1.3rem;
+  }
+
+  .nav-item-mobile {
+    display: list-item;
+    list-style: none;
+    width: 90%;
+    max-width: 320px;
+  }
+
+  .nav-item-mobile .btn {
+    width: 100%;
   }
 
   .navbar-logo {
+    position: relative;
     z-index: 20;
   }
 }

@@ -21,19 +21,25 @@ const Navbar: React.FC = () => {
         <div className="menu-icon" onClick={handleToggle}>
           {isOpen ? <FaTimes /> : <FaBars />}
         </div>
-        <div className={isOpen ? 'nav-menu active' : 'nav-menu'}>
-          <Link to="/features" className="nav-item" onClick={closeMobileMenu}>Features</Link>
-          <Link to="/pricing" className="nav-item" onClick={closeMobileMenu}>Pricing</Link>
-          <Link to="/support" className="nav-item" onClick={closeMobileMenu}>Support</Link>
-          
-          {/* Mobile-only actions */}
-          <div className="nav-actions-mobile">
+        <ul className={isOpen ? 'nav-menu active' : 'nav-menu'}>
+          <li className="nav-item">
+            <Link to="/features" className="nav-link" onClick={closeMobileMenu}>Features</Link>
+          </li>
+          <li className="nav-item">
+            <Link to="/pricing" className="nav-link" onClick={closeMobileMenu}>Pricing</Link>
+          </li>
+          <li className="nav-item">
+            <Link to="/support" className="nav-link" onClick={closeMobileMenu}>Support</Link>
+          </li>
+          <li className="nav-item-mobile">
             <Link to="/login" className="btn btn-secondary" onClick={closeMobileMenu}>Login</Link>
+          </li>
+          <li className="nav-item-mobile">
             <Link to="/signup" className="btn btn-primary" onClick={closeMobileMenu}>Get Started</Link>
-          </div>
-        </div>
+          </li>
+        </ul>
         <div className="nav-actions-desktop">
-          <Link to="/login" className="nav-item">Login</Link>
+          <Link to="/login" className="nav-link">Login</Link>
           <Link to="/signup" className="btn btn-primary">Get Started</Link>
         </div>
       </div>
